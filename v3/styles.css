@@ -33,17 +33,33 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     width: 1px;
   }
 
+  .forsidaflex {
+    display: flex;
+  }
+
   .sidulisti {
     display: flex;
     flex-direction: row;
+    gap: 1em;
   }
 
   .sidulisti > div {
-    margin: 10px;
-    text-align: center;
     font-size: 20px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
-  
+
+  main {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .forsidalisti {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+
   /* Uppsetning á síðu—layout */
   .content {
     /* Lætur börn .content raða sér með _flexbox_ */
@@ -51,11 +67,15 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     /* röðun sé í dálkaröð (niður) */
     flex-direction: column;
   }
-  
+
   .content > header {
     background-color: #00bfff;
   }
   
+  header > h1 {
+    width: 1200px;
+    margin: 0 auto;
+  }
   .content > nav {
   }
   
@@ -68,17 +88,26 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     background-color: #00bfff;
     /* position: absolute; */
   }
+
+  footer > p {
+    width: 1200px;
+    margin: 0 auto;
+  }
   
   /* almennar skilgreiningar */
   
   h1, h2 {
     /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
     padding-bottom: 1em;
+    padding-top: 1em;
   }
   
   a {
     /* TODO setja almennar skilgreinar fyrir tengla */
     color: black;
+  }
+
+  .takalinu {
     text-decoration: none;
   }
 
@@ -113,6 +142,16 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   /* TODO */
   
   /* töflur */
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #afebff;
+  }
   
   table {
     border-spacing: 0;
@@ -121,5 +160,39 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   /* TODO */
   
   /* form */
+  form {
+    padding-bottom: 0.25em;
+  }
+
+  fieldset {
+    border-width: 1px;
+    border-color: #00bfff;
+  }
+
+  input {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  label {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  select {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  legend {
+    margin-top: 10em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-size: 22px;
+  }
+
+  .button {
+    background-color: #afebff;
+  }
   
   /* TODO */
