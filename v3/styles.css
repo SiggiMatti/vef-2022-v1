@@ -33,6 +33,25 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     width: 1px;
   }
 
+  /* Uppsetning á síðu—layout */
+  .content {
+    /* Lætur börn .content raða sér með _flexbox_ */
+    display: flex;
+    /* röðun sé í dálkaröð (niður) */
+    flex-direction: column;
+    position: relative; /* Halda footer neðst á skjá */
+    min-height: 100vh;
+
+  }
+
+  .content > nav {
+  }
+  
+  .content > main {
+    /* Lætur <main> taka allt auka pláss sem er í boði */
+    flex: 1;
+  }
+
   .forsidaflex {
     display: flex;
   }
@@ -46,7 +65,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   .sidulisti > div {
     font-size: 20px;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
   }
 
   main {
@@ -58,40 +77,6 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     display: flex;
     flex-direction: row;
     gap: 2em;
-  }
-
-  /* Uppsetning á síðu—layout */
-  .content {
-    /* Lætur börn .content raða sér með _flexbox_ */
-    display: flex;
-    /* röðun sé í dálkaröð (niður) */
-    flex-direction: column;
-  }
-
-  .content > header {
-    background-color: #00bfff;
-  }
-  
-  header > h1 {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .content > nav {
-  }
-  
-  .content > main {
-    /* Lætur <main> taka allt auka pláss sem er í boði */
-    flex: 1;
-  }
-  
-  .content > footer {
-    background-color: #00bfff;
-    /* position: absolute; */
-  }
-
-  footer > p {
-    width: 1200px;
-    margin: 0 auto;
   }
   
   /* almennar skilgreiningar */
@@ -107,12 +92,8 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     color: black;
   }
 
-  .takalinu {
-    text-decoration: none;
-  }
-
   p {
-    padding-bottom: 1em;
+    margin-bottom: 1em;
   }
 
   img {
@@ -120,7 +101,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   }
 
   em {
-    padding-bottom: 1em;
+    margin-top: 1em;
   }
   
   /* nav — valmynd */
@@ -133,20 +114,44 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   nav ul li {
     /* TODO */
   }
-  
-  /* TODO */
+
   
   
   /* main — meginmál */
   
-  /* TODO */
+  .takalinu {
+    text-decoration: none;
+  }
+
+  .content > header {
+    background-color: #00bfff;
+  }
   
+  header > h1 {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .content > footer {
+    background-color: #00bfff;
+    margin-top: 1em;
+    /* position: absolute; */
+  }
+
+  footer > p {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 0.6em;
+    padding-top: 0.6em;
+  }
+
   /* töflur */
 
   td, th {
-    border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 0.25em;
   }
 
   tr:nth-child(even) {
@@ -156,8 +161,6 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   table {
     border-spacing: 0;
   }
-  
-  /* TODO */
   
   /* form */
   form {
@@ -191,8 +194,14 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
     font-size: 22px;
   }
 
+  /* Takki */
+
   .button {
+    border-radius: 6px;
+    padding: 0.3em;
+    border-width: 1px;
+    border-color:#00bfff;
     background-color: #afebff;
+    margin-left: 0;
+    margin-top: 1em;
   }
-  
-  /* TODO */
