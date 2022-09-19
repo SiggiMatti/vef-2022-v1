@@ -164,7 +164,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   
   /* form */
   form {
-    padding-bottom: 1em;
+    padding-top: 1em;
   }
 
   fieldset {
