@@ -164,7 +164,7 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   
   /* form */
   form {
-    padding-bottom: 0.25em;
+    padding-bottom: 1em;
   }
 
   fieldset {
@@ -188,7 +188,6 @@ Setjum inn „reset“ sem fjarlægir margin og padding af öllu
   }
 
   legend {
-    margin-top: 10em;
     margin-bottom: 1em;
     margin-left: 1em;
     font-size: 22px;
