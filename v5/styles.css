@@ -49,29 +49,11 @@
     font-size: var(--font-base-body-px);
     line-height: 1.5;
     font-family: var(--font-family-base);
-    background-image: url("myndir/header.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 
   }
   
   h1, h2, h3 {
     font-family: var(--font-family-heading);
-  }
-
-  header .protection {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  .content {
-    z-index: 2;
   }
 
   a {
@@ -223,8 +205,14 @@
   header {
     color: var(--color-header);
     text-align: center;
-    padding-top: 23em;
-    padding-bottom: 23em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("myndir/header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
   }
 
   header h1 {
@@ -233,10 +221,32 @@
   }
 
   header p {
-    font-size: calc(var(--spacing)*1.6);
-    padding-bottom: 0.3em;
+    font-size: calc(var(--spacing)*1.4);
   }
   
+  header .protection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  header .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    margin: auto;
+    font-family: var(--font-family-heading);
+    font-size: calc(var(--font-base-size));
+    text-align: center;
+  }
+
+
   /* TODO */
   
   /* Upplýsingasvæði */
