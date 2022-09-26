@@ -159,8 +159,6 @@
 
   .cards {
     display: flex;
-    flex-direction: reverse;
-    gap: 4;
   }
   
   .card {
