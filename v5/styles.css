@@ -47,7 +47,7 @@
   /* TODO Setja upp leturgerðir */
   
   /* Almennt */
-  
+
   body {
     color: var(--color-text);
     font-size: var(--font-base-body-px);
@@ -112,7 +112,7 @@
     grid-template-columns: 100%;
     gap: var(--gutter);
     margin: 0 auto;
-    width: calc(100% - (6 * var(--offset)));
+    width: calc(100% - (2 * var(--offset)));
     max-width: var(var(--max-width));
   }
   
@@ -131,17 +131,20 @@
 
   .info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: calc(var(--spacing) * 4);
-    padding-top: calc(var(--spacing)* 3)
+    padding-top: calc(var(--spacing)* 3);
+    grid-column: 1 / span 12;
   }
+
 
   .info2 {
     display: flex;
-    flex-direction: row-reverse;
     gap: calc(var(--spacing) * 4); 
     padding-bottom: calc(var(--spacing)* 5);
     padding-top: calc(var(--spacing)* 3);
+    flex-direction: column;
+    grid-column: 1 / span 12;
   }
   .info-card img {
     max-width: 100%;
@@ -162,6 +165,13 @@
 
   .info-card-texti .button {
     font-size: 4rem;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: var(--gutter);
   }
 
   .cards {
@@ -283,24 +293,6 @@
     font-size: 5rem;
   }
 
-
-
-  .info-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: var(--gutter);
-  }
-  .info-card img {
-  }
-  .info {
-    flex-direction: column;
-    grid-column: 1 / span 12;
-  }
-  .info2 {
-    flex-direction: column;
-    grid-column: 1 / span 12;
-  }
   .examples-grid {
     display: grid; 
     grid-template-columns: repeat(12,1fr);
@@ -310,4 +302,49 @@
   .cards {
     grid-column: 1 / span 12;
     flex-direction: column;
+  }
+
+  @media (min-width: 700px) {
+      .info {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: var(--gutter);
+      }
+      .info-card-texti {
+        grid-column: 1 / span 6;
+      }
+      .info-card-texti h2{
+        font-size: var(--font-base-body-px);
+      }
+      .info-card-texti p {
+        font-size: var(--font-base-body-px)
+      }
+      .info-card {
+        grid-column: 7 / span 6;
+      }
+      .info-card-texti .button {
+        font-size: var(--font-base-body-px)
+      }
+      .info2 {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: var(--gutter);
+      }
+      /*
+      .info2 .info-card {
+        grid-column: 1 / span 6;
+      }
+      .info2 .info-card-texti {
+        grid-column: 7 / span 6;
+      }
+      */
+      .content p {
+        font-size: var(--font-base-body-px);
+      }
+      .content h1 {
+        font-size: var(--font-base-body-px);
+      }
+
   }
