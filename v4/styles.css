@@ -175,6 +175,7 @@ main {
 
 .card .card-buttons {
   bottom: 0;
+  padding-bottom: 0.5em;
 }
 
 .card img {
@@ -182,6 +183,10 @@ main {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   max-width: 100%;
+}
+
+.card p {
+  flex: 1;
 }
 
 section {
