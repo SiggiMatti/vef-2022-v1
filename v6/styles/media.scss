@@ -1,0 +1,112 @@
+@media (min-width: 600px) {
+
+    .button-secondary {
+      font-size: calc(#{$font-base-size}*1.4);
+    }
+
+    .kicker {
+      font-size: $font-base-size;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: $gutter;
+    }
+    .info-card-texti {
+      grid-column: 1 / span 6;
+      h2{
+          font-size: 1.5rem;
+      }
+
+      p {
+          font-size: $font-base-body;
+      }
+
+      .button {
+          font-size: $font-base-body;
+      }
+    }
+    .info-card {
+      grid-column: 7 / span 6;
+    }
+
+    .info2 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: $gutter;
+      padding-bottom: 0;
+      .info-card {
+          grid-column: 1 / span 6;
+      }
+      .info-card-texti {
+          grid-column: 7 / span 6;
+      }
+    }
+    
+    .content {
+      p {
+          font-size: calc(#{$font-base-body}*1.5);
+      }
+
+      h1 {
+          font-size: calc(#{$spacing}*4);
+      }
+    }
+    
+    .examples {
+      h2 {
+          font-size: calc(#{$font-base-size}*1.5);
+      }
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: $gutter;
+    }
+    .card {
+      grid-column: span 6;
+      margin-bottom: $gutter;
+      img {
+          height: 300px;
+      }
+
+      h3 {
+          font-size: $font-base-size;
+      }
+
+      p {
+          font-size: $font-base-size;
+      }
+      .card-buttons {
+          display: inline-block;
+          font-size: $font-base-size;
+        }
+    }
+
+    footer {
+      p {
+          font-size: $font-base-size;
+        }
+    }
+
+}
+
+@media (min-width: 1000px) {
+  .info .info-card-texti {
+    grid-column: 2 / span 4;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .info2 .info-card-texti {
+    grid-column: 8 / span 4;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .card p {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,52 @@
+
+  .cards {
+    display: flex;
+  }
+
+  .cards {
+    grid-column: 1 / span 12;
+    flex-direction: column;
+  }
+
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+    border: 3px solid $color-border;
+    margin-bottom: calc(#{$spacing}*2);
+    :not(img) {
+        position: relative;
+        margin-left: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    a {
+    margin: 0;
+    }
+
+    .card-buttons {
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        font-size: $font-base-size;
+        padding-bottom: 0.5em;
+    }
+
+    img {
+        order: -1;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    p {
+        font-size: calc(#{$font-base-size}*1.1);
+        flex: 1;
+    }
+
+    h3 {
+        font-size: calc(#{$font-base-size}*1.3);
+      }
+  }
