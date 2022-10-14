@@ -1,99 +1,105 @@
 /* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Reiknum stærð á öllum boxum sem border-box */
-  html {
-    box-sizing: border-box;
-  
-    /* Lætur skroll innan síðu taka tíma */
-    scroll-behavior: smooth;
-  }
-  
-  /* og látum erfast á allt */
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  /* Breytur sem skal nota */
-    
-  $spacing: 1rem;
-  /* Hámarksbreidd á efni */
-  $max-width: 1400px;
+  margin: 0;
+  padding: 0;
+}
 
-  $color-primary: #f0f0f8;
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
 
-  $color-header: #fff;
-  $color-text: #000;
-  $color-border: #ccc;
+  /* Lætur skroll innan síðu taka tíma */
+  scroll-behavior: smooth;
+}
 
-  /* Letur stillingar */
-  $font-base-body: 16px;
-  $font-base-size: 1rem;
-  $font-family-base: 'Nunito', Helvetica, Arial, sans-serif;
-  $font-family-heading: 'Domine', Georgia, serif;
+/* og látum erfast á allt */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-  $columns: 12;
-  $gutter: 30px;
-  $offset : 20px; 
-  
-  /* Leturgerðir */
-  
-  /* TODO Setja upp leturgerðir */
-  
-  /* Almennt */
+/* Breytur sem skal nota */
 
-  body {
-    color: $color-text;
-    font-size: $font-base-body;
-    line-height: 1.5;
-    font-family: $font-family-base;
+$spacing: 1rem;
 
-  }
-  
-  h1, h2, h3 {
-    font-family: $font-family-heading;
-  }
+/* Hámarksbreidd á efni */
+$max-width: 1400px;
 
-  a {
-    color: $color-text;
-    text-decoration: none;
-  }
+$color-primary: #f0f0f8;
 
-  img {
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-  
-  /* Layout */
+$color-header: #fff;
+$color-text: #000;
+$color-border: #ccc;
 
-  main {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 100%;
-    gap: $gutter;
-    margin: 0 auto;
-    width: calc(100% - (2 * #{$offset}));
-    /*background-color: var($color-primary); */
-  }
-  
-  .kicker {
-    font-size: calc(#{$spacing}* 0.875)
-  }
+/* Letur stillingar */
+$font-base-body: 16px;
+$font-base-size: 1rem;
+$font-family-base: 'Nunito', helvetica, arial, sans-serif;
+$font-family-heading: 'Domine', georgia, serif;
 
-  section {
-    max-width: $max-width;
-    margin: 0 auto;
-  }
+$columns: 12;
+$gutter: 30px;
+$offset: 20px;
 
-  footer {
+/* Leturgerðir */
+
+/* TODO Setja upp leturgerðir */
+
+/* Almennt */
+
+body {
+  color: $color-text;
+  font-family: $font-family-base;
+  font-size: $font-base-body;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-family-heading;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* Layout */
+
+main {
+  display: grid;
+  gap: $gutter;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  margin: 0 auto;
+  width: calc(100% - (#{$offset} * 2));
+
+  /* background-color: var($color-primary); */
+}
+
+.kicker {
+  font-size: calc(#{$spacing} * 0.875);
+}
+
+section {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+footer {
+  background-color: $color-border;
+
+  p {
     background-color: $color-border;
-    p {
-        text-align: center;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        background-color: $color-border;
-    }
+    padding-bottom: 1em;
+    padding-top: 1em;
+    text-align: center;
   }
+}

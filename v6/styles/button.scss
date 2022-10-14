@@ -1,33 +1,32 @@
-  
-  
-  .button {
-    display: inline-block;
-    border-radius: 6px;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-radius: 2.5px;
-    border-color: $color-border;
-    background-color: $color-border;
-    margin-left: 0;
-    margin-top: 1em;
-  
-    /* TODO útlit á button */
-  }
 
-  .button-secondary {
-    display: inline-block;
-    border-radius: 6px;
-    padding-left: 0.6em;
-    padding-right: 0.6em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-radius: 2.5px;
-    border-color: $color-primary;
-    background-color: $color-header;
-    margin-left: 0;
-    margin-top: 1em;
-  
-    /* TODO útlit á button */
-  }
+.button {
+  background-color: $color-border;
+  border-color: $color-border;
+  border-radius: 6px;
+  border-radius: 2.5px;
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 1em;
+  padding-bottom: 0.3em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 0.3em;
+
+  /* TODO útlit á button */
+}
+
+.button-secondary {
+  background-color: $color-header;
+  border-color: $color-primary;
+  border-radius: 6px;
+  border-radius: 2.5px;
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 1em;
+  padding-bottom: 0.3em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 0.3em;
+
+  /* TODO útlit á button */
+}
