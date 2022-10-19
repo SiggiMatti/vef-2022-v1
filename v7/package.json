@@ -4,12 +4,20 @@
   "description": "[Sýnilausn á verkefni 7](https://github.com/vefforritun/vef1-2022-v7).",
   "main": "scripts.js",
   "scripts": {
-    "dev": "browser-sync start --server --files scripts.js index.html"
+    "dev": "browser-sync start --server --files scripts.js index.html",
+    "copy:html": "cpy ./*.html ./build/",
+    "copy:js": "cpy ./*.js ./build/",
+    "build": "concurrently npm:copy:*"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.10"
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "copy": "^0.3.2",
+    "cpy-cli": "^4.2.0"
   }
 }
