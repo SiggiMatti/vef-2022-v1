@@ -71,7 +71,8 @@ function onCupClick(e) {
 
     // Uppfæri stigið í HTML
     const point = document.getElementById("points");
-    points += lengd - 1;
+    points += parseInt(e.target.innerText)- 1;
+    console.log(e.target.innerText - 1);
     point.innerText = points;
 
     // Læt svg af bolla hverfa
