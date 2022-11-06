@@ -60,19 +60,15 @@ function onCupClick(e) {
   // Næ í fjölda bolla
   let fjBolla = document.getElementsByClassName("game")[0].getElementsByClassName("cup");
   let lengd = fjBolla.length;
-  console.log("d", lengd)
 
   // By til random tölu upp að fjölda bolla
   let rand = randomNumber(1, parseInt(lengd));
-
-  console.log("button: ", e.target.innerText, " bollaNr: ", bollaNr, " rand: ", rand);
 
   if (rand == bollaNr) {
 
     // Uppfæri stigið í HTML
     const point = document.getElementById("points");
     points += parseInt(e.target.innerText)- 1;
-    console.log(e.target.innerText - 1);
     point.innerText = points;
 
     // Læt svg af bolla hverfa
@@ -94,7 +90,6 @@ function onCupClick(e) {
 
     mynd.appendChild(circ);
 
-    console.log(svgg);
 
     
     // Tek bollana af skjánum
@@ -148,7 +143,6 @@ function onFormSubmit(e) {
   const maingame = document.querySelector('.game__main');
   let val = document.getElementById('cups').value
 
-  console.log(val);
   if(!isValidNum(val, 2, 10)) {
     // Ef er ekki valid num
     formError.classList.toggle('form__error--hidden')
